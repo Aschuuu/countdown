@@ -4,6 +4,7 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
+    transition:0.3s ease-in-out;
 }
 
 body{
@@ -15,6 +16,7 @@ body{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    background-position:center 0rem;
 }
 
 h1{
@@ -44,4 +46,23 @@ h1{
 
 .countdown-el p{
     min-width:120px
+}
+
+@media(max-width:895px){
+    body{
+        padding: 0 2rem;
+    }
+    h1{
+        font-size:2rem;
+    }
+    .big-text{
+        font-size:3rem;
+        margin:0;
+    }
+    .countdown-el span{
+        font-size: 1rem;
+    }
+    .countdown-el p{
+        min-width:100px;
+    }
 }
