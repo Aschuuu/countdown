@@ -4,15 +4,15 @@ const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
 
-const grad = '2 June 2021';
+const grad = '4 June 2021';
 
-function countdown(){
+function countdown() {
     const gradDate = new Date(grad);
     const currentDate = new Date();
     const totalSeconds = (gradDate - currentDate) / 1000;
     const days = Math.floor(totalSeconds / 3600 / 24);
-    const hours = Math.floor(totalSeconds / 3600 ) % 24;
-    const minutes = Math.floor(totalSeconds / 60 ) % 60;
+    const hours = Math.floor(totalSeconds / 3600) % 24;
+    const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
     daysEl.innerHTML = formatTime(days);
@@ -20,12 +20,12 @@ function countdown(){
     minsEl.innerHTML = formatTime(minutes);
     secondsEl.innerHTML = formatTime(seconds);
 
-    if(Math.floor(totalSeconds) == 0){
+    if (Math.floor(totalSeconds) == 0) {
         clearInterval(interval);
     };
 }
 
-function formatTime(time){
+function formatTime(time) {
     return time < 10 ? (`0${time}`) : time;
 }
 
