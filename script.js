@@ -4,7 +4,7 @@ const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
 
-const grad = '4 June 2021';
+const grad = '17 June 2021 09:00:00';
 
 function countdown() {
     const gradDate = new Date(grad);
